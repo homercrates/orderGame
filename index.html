@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="file:///C:/Users/M/Documents/code/orderDisOrder/work/styles/main.css">	
+	<title>Order Disorder</title>
+
+	<link rel="manifest" href="/manifest.json">
+
+	<!-- Add to home screen for Safari on iOS -->
+  	<meta name="apple-mobile-web-app-capable" content="yes">
+ 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+ 	<meta name="apple-mobile-web-app-title" content="Weather PWA">
+ 	<link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  
+  <!-- Tile icon for windows added -->
+	<meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
+
+</head>
+<body onload="startGame();">
+	
+	<div id="message">message here</div>
+
+	<div class="container">
+	<table width="100%" border="1">
+		<tr>
+			<td class="square" id="s1"  onClick="nextMove(this)"></td>
+			<td class="square" id="s2"  onClick="nextMove(this)"></td>
+			<td class="square" id="s3"  onClick="nextMove(this)"></td>
+			<td class="square" id="s4"  onClick="nextMove(this)"></td>
+			<td class="square" id="s5"  onClick="nextMove(this)"></td>
+		</tr>
+		<tr>
+			<td class="square" id="s6"  onClick="nextMove(this)"></td>
+			<td class="square" id="s7"  onClick="nextMove(this)"></td>
+			<td class="square" id="s8"  onClick="nextMove(this)"></td>
+			<td class="square" id="s9"  onClick="nextMove(this)"></td>
+			<td class="square" id="s10"  onClick="nextMove(this)"></td>
+		</tr>
+		<tr>
+			<td class="square" id="s11"  onClick="nextMove(this)"></td>
+			<td class="square" id="s12"  onClick="nextMove(this)"></td>
+			<td class="square" id="s13"  onClick="nextMove(this)"></td>
+			<td class="square" id="s14"  onClick="nextMove(this)"></td>
+			<td class="square" id="s15"  onClick="nextMove(this)"></td>
+		</tr>
+		<tr>
+			<td class="square" id="s16"  onClick="nextMove(this)"></td>
+			<td class="square" id="s17"  onClick="nextMove(this)"></td>
+			<td class="square" id="s18"  onClick="nextMove(this)"></td>
+			<td class="square" id="s19"  onClick="nextMove(this)"></td>
+			<td class="square" id="s20"  onClick="nextMove(this)"></td>
+		</tr>
+		<tr>
+			<td class="square" id="s21"  onClick="nextMove(this)"></td>
+			<td class="square" id="s22"  onClick="nextMove(this)"></td>
+			<td class="square" id="s23"  onClick="nextMove(this)"></td>
+			<td class="square" id="s24"  onClick="nextMove(this)"></td>
+			<td class="square" id="s25"  onClick="nextMove(this)"></td>
+		</tr>
+	</table>
+	</div>
+	
+
+<!--  felxbox attempt not sure if its right for this
+	<div class = "container">
+		<div class="square" id="1">1</div>
+		<div class="square" id="2">2</div>
+		<div class="square" id="3">3</div>
+		<div class="square" id="4">4</div>
+		<div class="square" id="5">5</div>
+		
+		<div class="square" id="6">6</div>
+		<div class="square" id="7">7</div>
+		<div class="square" id="8">8</div>
+		<div class="square" id="9">9</div>
+		<div class="square" id="10">10</div>
+
+		<div class="square" id="11">11</div>
+		<div class="square" id="12">12</div>
+		<div class="square" id="13">13</div>
+		<div class="square" id="14">14</div>
+		<div class="square" id="15">15</div>
+
+		<div class="square" id="16">16</div>
+		<div class="square" id="17">17</div>
+		<div class="square" id="18">18</div>
+		<div class="square" id="19">19</div>
+		<div class="square" id="20">20</div>
+
+		<div class="square" id="21">21</div>
+		<div class="square" id="22">22</div>
+		<div class="square" id="23">23</div>
+		<div class="square" id="24">24</div>
+		<div class="square" id="25">25</div>
+	</div>
+-->
+	<table border="1">
+		<tr>
+			<td class="choice" id="pickBlack" onClick="chooseColor('black')"></td>
+			<td class="choice" id="pickWhite" onClick="chooseColor('white')"></td>
+		</tr>
+	</table>
+
+	<a href="javascript: startGame();" id="restart">New Game</a>
+
+
+	<script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+	<script>
+  // Initialize Firebase
+  	var config = {
+    	apiKey: "AIzaSyACVgJyWTvrOoU-dhMQZxgK77V85yCzm5Q",
+    	authDomain: "orderdisorder-fcc9a.firebaseapp.com",
+    	databaseURL: "https://orderdisorder-fcc9a.firebaseio.com",
+    	projectId: "orderdisorder-fcc9a",
+    	storageBucket: "orderdisorder-fcc9a.appspot.com",
+    	messagingSenderId: "593642470100"
+  	};
+  	firebase.initializeApp(config);
+	</script>
+
+	<script src="file:///C:/Users/M/Documents/code/orderDisOrder/work/scripts/main.js"></script>
+
+</body>
+</html>
